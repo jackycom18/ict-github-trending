@@ -1,0 +1,16 @@
+{
+  "name": "GitHub Trending 每日分析",
+  "projectFolder": "current",
+  "prompt": "使用 analyze-github-trending 技能分析 GitHub Trending 每日榜单，执行 node scripts/run-analysis.mjs --period daily，生成今日中文日报并同步更新 dashboard 页面，并在码道内置浏览器预览 dashboard 页面。",
+  "frequency": {
+    "type": "daily",
+    "time": "08:00",
+    "timezone": "Asia/Shanghai"
+  },
+  "enabled": true,
+  "command": "node scripts/run-analysis.mjs --period daily --output-dir reports/github-trending",
+  "outputs": {
+    "report": "reports/github-trending/<date>-daily.md",
+    "dashboard": "reports/github-trending/dashboard/index.html"
+  }
+}
